@@ -1,0 +1,9 @@
+﻿{
+  "AppSettings": {
+    "SiteEmailAddress": "mikzepro@gmail.com"
+
+  },
+  "Data": {
+    "TrapContextConnection": "Server=tcp:trap.database.windows.net,1433;Initial Catalog=Traps;Persist Security Info=False;User ID=mikze;Password=Symfoniac++2;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  }
+}

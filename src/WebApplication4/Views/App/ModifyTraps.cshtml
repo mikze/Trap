@@ -1,0 +1,25 @@
+﻿@model IEnumerable<WebApplication4.Models.Trap>
+@section Scripts{
+    <script src="~/lib/angular/angular.min.js"></script>
+    <script src="~/js/app-traps.js"></script>
+    <script src="~/js/trapsController.js"></script>
+    <script src="~/js/trapEditorController.js"></script>
+    <script src="~/lib/angular-route/angular-route.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title></title>
+</head>
+<body>
+
+    <div class="row" ng-app="app-traps">
+   
+    <div ng-view></div>
+
+    </div>
+</body>
+</html>

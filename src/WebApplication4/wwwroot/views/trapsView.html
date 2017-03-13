@@ -1,0 +1,39 @@
+ <div class="row">
+ <div class="col-md-6">
+        <div class="text-danger" ng-show="vm.errorMessage">{{vm.errorMessage}}</div>
+        <table class="table table-responsive table-striped">
+            <tr ng-repeat="trap in vm.traps">
+                <td>{{ trap.userName }}</td>
+                <td>{{ trap.createDate }}</td>
+                <td><a ng-href="#/editor/{{trap.trapId}}" class="btn btn-sm btn-primary">Edit</a></td>
+                <td><a ng-href="#/remove/{{trap.trapId}}" ng-click="vm.idRem=666"  class="btn btn-sm btn-primary">Remove</a></td>
+            </tr>
+        </table>
+
+        <form novalidate name="newTrapForm" ng-submit="vm.addTrap()">
+            <div class="form-group">
+                <label for="name">Trap's name</label>
+                <input class="form-control" type="text" id="userName" name="userName" ng-model="vm.newTrap.userName" required ng-minlength="5"/>
+                <label for="latitude">Trap's ID</label>
+                <input class="form-control" type="number" id="trapId" name="trapId" ng-model="vm.newTrap.trapId" required ng-minlength="1"/>
+                <label for="longitude">Trap's latitude</label>
+                <input class="form-control" type="number" id="longitude" name="longitude" ng-model="vm.newTrap.longitude"/>
+                <label for="latitude">Trap's longitude</label>
+                <input class="form-control" type="number" id="latitude" name="latitude" ng-model="vm.newTrap.latitude" />
+                <span ng-show="newTrapForm.name.$error.required" class="text-warning">userName is required</span>
+                <span ng-show="newTrapForm.name.$error.minlength" class="text-warning">userName must be at least 5 char</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="add" class="btn btn-success btn-sm" ng-disabled="newTrapForm.$invalid"/>
+            </div>
+        </form>
+    </div>
+    
+    </div>
+
+
+
+        <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/site.js"></script>
+        <script src="https://npmcdn.com/leaflet@1.0.0-rc.2/dist/leaflet.js"></script>
