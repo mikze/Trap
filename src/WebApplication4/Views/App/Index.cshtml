@@ -13,7 +13,7 @@
 
 
     <div>
-        <h2>The Map</h2>
+       <center> <h2>Ratbox Locations</h2></center>
         <div id="mapid">
 
             <script src="https://cdn.jsdelivr.net/pouchdb/5.4.5/pouchdb.min.js"></script>
@@ -23,7 +23,7 @@
                    
                     var ob=[];
 
-                    $.getJSON('http://localhost:64002/api/traps', JsonFuncCallBack);
+                    $.getJSON('http://188.116.12.107:5000/api/traps', JsonFuncCallBack);
                     
                     function JsonFuncCallBack(data)
                     {
